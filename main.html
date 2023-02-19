@@ -179,7 +179,7 @@
 
         console.log(`arccos(sin(${endLatLng.lat.toFixed(2)})*sin(${startLatLng.lat.toFixed(2)})+cos(${endLatLng.lat.toFixed(2)})*cos(${startLatLng.lat.toFixed(2)})*cos(${endLatLng.lng.toFixed(2)}-${startLatLng.lng.toFixed(2)}))`)
         console.log('≈'+s.toFixed(7));
-        console.log(`${s.toFixed(7)}*(180/π)*6371`)
+        console.log(`${s.toFixed(7)}*(π/180)*6371`)
         console.log('≈'+distance.toFixed(2)+'km')
         console.log('La distance entre les deux points est de '+distance.toFixed(2)+'km')
         
