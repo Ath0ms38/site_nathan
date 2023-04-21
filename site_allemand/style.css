@@ -1,0 +1,1401 @@
+@font-face{
+    font-family: 'Futura';
+    src: url('./ressource/Futura.ttc');
+}
+@font-face{
+    font-family: 'Futura_Light';
+    src: url('./ressource/Futura_Light.otf');
+}
+@font-face{
+  font-family: 'Menlo';
+  src: url('./ressource/Menlo.ttc');
+}
+@import url('https://fonts.googleapis.com/css?family=Lato:100&display=swap');
+
+
+/* color palette:
+https://coolors.co/palette/011627-fdfffc-2ec4b6-e71d36-ff9f1c */
+
+
+body{
+  padding: 0;
+  margin: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+
+ul{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+li{
+    padding: 0;
+    margin: 0;
+}
+
+header{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    position: relative;
+    align-items: center;
+
+    height: 100vh;
+    width: 100vw;
+    
+    background-image: url('./ressource/BAMBERG.JPG');
+    background-size: cover;
+    background-position: center top;
+}
+
+h1{
+    padding: 0;
+    margin: 0;
+}
+
+
+
+
+header div{
+    position: absolute;
+    bottom: 50%;
+}
+header h1{
+    font-family: 'Futura';
+    font-size: 4vw;
+    font-size : clamp(2rem, 5vw, 5rem);
+    color: #fdfffc;
+}
+header h3{
+    font-family: 'Futura_Light';
+    letter-spacing: 1vw;
+    color: #fdfffc;
+    font-size : clamp(1rem, 1.5vw, 5rem);
+    
+}
+
+header h2{
+    font-family: 'Futura_Light';
+    color: #fdfffc;
+    letter-spacing: 0.7vw;
+    font-size : clamp(1rem, 2vw, 5rem);
+}
+
+
+
+
+
+
+
+.container1 {
+
+    position: absolute;
+    left: 50%;
+    top: 85%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  
+  .center {
+    width: 180px;
+    height: 60px;
+  }
+  
+  .btn {
+    width: 180px;
+    height: 60px;
+    cursor: pointer;
+    background: transparent;
+    border: 1px solid #fff;
+    outline: none;
+    transition: 1s ease-in-out;
+  }
+  
+  .svg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    fill: none;
+    stroke: #fff;
+    stroke-dasharray: 150 480;
+    stroke-dashoffset: 150;
+    transition: 1s ease-in-out;
+  }
+  
+  .btn:hover {
+    transition: 1s ease-in-out;
+    background: rgb(29, 39, 47);
+  }
+  
+  .btn:hover svg {
+    stroke-dashoffset: -480;
+  }
+  
+  .btn span {
+    color: white;
+    font-size: 18px;
+    font-weight: 100;
+  }
+
+
+#vendredi{
+  height: 100vh;
+  width: 100vw;
+  background-color: #E3CCAE;
+  position: relative;
+}
+
+
+
+#vendredi::after{
+  content: '';
+  display: block;
+  height: 20vw;
+  width: 20vw;
+  border-top: 2.7vw solid #000000;
+  border-left: 2.7vw solid #000000;
+  position: absolute;
+  top: 5vw;
+  left: 5vw;
+}
+
+#vendredi::before{
+  content: '';
+  display: block;
+  height: 20vw;
+  width: 20vw;
+  border-bottom: 2.7vw solid #000000;
+  border-right: 2.7vw solid #000000;
+  position: absolute;
+  bottom: 5vw;
+  right: 5vw;
+}
+
+
+
+
+
+
+
+#vendredi section{
+  display: grid;
+  row-gap: 10vh ;
+  grid-template-areas: 'myArea myArea';
+  width: 80vw;
+  height: 80vh;
+}
+
+
+
+
+
+#vendredi{
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+#vendredi .container {  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  grid-template-rows: 1fr 1fr;
+  grid-auto-columns: 1fr;
+  grid-auto-rows: 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "textarea image"
+    "bottom bottom";
+  height: 80vh;
+  width: 100%;
+}
+
+#vendredi  .image {  display: grid;
+  grid-template-columns: 0.7fr 1.7fr 0.6fr;
+  grid-template-rows: 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    ". . .";
+  grid-area: image;
+  overflow:hidden;
+}
+
+#vendredi  .textarea {  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "titre"
+    "sous_titre"
+    "paragraphe";
+  grid-area: textarea;
+  font-family: 'Menlo';
+}
+
+#vendredi .titre { 
+  grid-area: titre; 
+  
+  font-size: clamp(1rem, 1.7vw, 5rem);
+  margin: 0;
+  margin-top: 2vh;
+  padding: 0;
+}
+
+
+
+#vendredi  .sous_titre { grid-area: sous_titre;}
+
+#vendredi .paragraphe { grid-area: paragraphe;}
+
+#vendredi .bottom {  display: grid;
+  grid-template-columns: 1.4fr 0.6fr;
+  grid-template-rows: 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "google_maps next";
+  grid-area: bottom;
+  height: 100%;
+  align-items: end
+}
+
+#vendredi .google_maps { 
+  grid-area: google_maps; 
+  overflow: hidden;
+  width: 150%;
+  height: 35vh;
+}
+
+#vendredi .next { grid-area: next; overflow: hidden;}
+
+#vendredi img{
+  width: 100%;
+  height: auto;
+}
+
+#vendredi video{
+  width: 100%;
+  height: auto;
+}
+
+
+
+.link{
+  height: 100%;
+  width: 100%;
+  position: relative;
+  display: block;
+}
+
+.next{
+  transform: translate(-50%, -50%);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 15vw;
+  height: 5vw;
+  background-color: #B8621B;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50px;
+  text-decoration: none;
+  color: #E3CCAE;
+  font-size : 1.5vw;
+  font-family: 'Menlo';
+  transition: all 0.3s ease-in-out;
+}
+.link{
+  text-decoration: none;
+  
+}
+.next svg{
+  display: none;
+  width: auto;
+  height: auto;
+  fill: #E3CCAE;
+  transition: none;
+  transition: all 0.3s ease-in-out;
+  padding: 10%;
+}
+.next:hover svg{
+
+  fill: #B8621B;
+}
+.next:hover{
+  background-color: #262A56;
+  color: #B8621B;
+  
+}
+
+
+
+@media (max-width: 1200px) {
+  #vendredi  .image {    
+    display: grid; 
+    grid-auto-columns: 1fr; 
+    grid-auto-rows: 1fr; 
+    grid-template-columns: 0.8fr 1.2fr; 
+    grid-template-rows: 1fr 1fr; 
+    gap: 0px 0px; 
+    grid-template-areas: 
+      "textarea image"
+      "bottom bottom"; 
+      margin: 2%;
+}
+
+#vendredi .glasse{
+  display: none;
+  
+}
+
+
+}
+@media (max-width: 768px) {
+  #vendredi img{
+    display: none;
+  }
+  #vendredi .container {  display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+  }
+  #vendredi  .image {    
+    display: block; 
+  }
+}
+@media (max-width: 576px) {
+  #vendredi section{
+    display: block;
+    
+  }
+  #vendredi .container{
+    display: block;
+    
+  }
+  #vendredi .bottom{
+    display: block;
+  }
+  #vendredi .google_maps{
+    height: 40vh;
+  }
+  #vendredi video{
+    display: none;
+  }
+
+  link{
+    position: absolute;
+    top: 10vh;
+    right: 35vw;
+    width: auto;
+    height: auto;
+  }
+  .next{
+    width: 35vw;
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 1000px) {
+  #vendredi .google_maps{
+    width: 100%;
+  }
+}
+
+
+
+
+
+
+
+
+
+#freitag_abend{
+  height: 100vh;
+  width: 100vw;
+  background-color: #E3CCAE;
+  position: relative;
+  
+}
+
+
+#freitag_abend::after{
+  content: '';
+  display: block;
+  height: 20vw;
+  width: 20vw;
+  border-bottom: 2.7vw solid #000000;
+  border-left: 2.7vw solid #000000;
+  position: absolute;
+  bottom: 5vw;
+  left: 5vw;
+
+}
+
+#freitag_abend::before{
+  content: '';
+  display: block;
+  height: 20vw;
+  width: 20vw;
+  border-top: 2.7vw solid #000000;
+  border-right: 2.7vw solid #000000;
+  position: absolute;
+  top: 5vw;
+  right: 5vw;
+}
+
+#freitag_abend img{
+  width: 100%;
+  height: auto;
+}
+#freitag_abend video{
+  width: 50%;
+  height: 100%;
+  overflow: hidden;
+}
+
+#freitag_abend .container {  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-auto-columns: 1fr;
+  grid-auto-rows: 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "textarea bar"
+    "metro_kirche_image exit_button";
+  position: absolute;
+  top: 7.7vw;
+  left: 7.7vw;
+  bottom: 7.7vw;
+  right: 7.7vw;
+  gap: 5% ;
+}
+
+#freitag_abend .textarea { 
+  grid-area: textarea; 
+  font-family: 'Menlo';
+}
+
+#freitag_abend .textarea h2{ 
+  font-size: clamp(1rem, 1.7vw, 5rem);
+}
+#freitag_abend .bar {  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "image_bar"
+    "text_bar";
+  grid-area: bar;
+  overflow: hidden;
+  
+}
+
+
+
+
+
+#freitag_abend .image_bar {  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-area: image_bar;
+  place-items: center;
+
+}
+#freitag_abend .metro{
+  background-image: url('./ressource/freitag/metro.jpg');
+  background-size:cover;
+  background-position: right;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+
+}
+#freitag_abend .metro:hover{
+  background-image: url('./ressource/freitag/metro_hover.jpg');
+  height: auto;
+  width: 100%;
+}
+
+
+#freitag_abend .text_bar { grid-area: text_bar; }
+
+#freitag_abend .metro_kirche_image {  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    ". .";
+  grid-area: metro_kirche_image;
+  width: 100%;
+  overflow: hidden;
+}
+
+#freitag_abend .exit_button {
+  display: grid; 
+  grid-template-columns: 0.7fr 1.3fr; 
+  grid-template-rows: 1fr; 
+  gap: 0px 0px; 
+  grid-template-areas: 
+    ". ."; 
+  grid-area: exit_button; 
+}
+#freitag_abend .antoine{
+  font-family: 'Menlo';
+  color: #E3CCAE;
+  text-shadow: 0 0 3px #000000;
+  background-image: url('./ressource/freitag/antoine.jpg'), url(https://media.discordapp.net/attachments/1015295250358603827/1090613560557707305/M-City_20220930_1525.png?width=960&height=620);
+  background-size: contain;
+  background-position: right, left;
+  background-repeat: no-repeat, no-repeat;
+  padding: 15px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#samedi{
+  display: block;
+  width: 100vw;
+  height: 100vh;
+  background-color: #E3CCAE;
+  position: relative;
+}
+#samedi::after{
+  content: '';
+  display: block;
+  height: 20vw;
+  border-top: 2.7vw solid #000000;
+  border-left: 2.7vw solid #000000;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 5vw;
+}
+
+#samedi::before{
+  content: '';
+  display: block;
+  height: 20vw;
+  border-bottom: 2.7vw solid #000000;
+  border-right: 2.7vw solid #000000;
+  position: absolute;
+  left: 5vw;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+
+#samedi .container {  display: grid;
+  grid-template-columns: 0.8fr 1.7fr;
+  grid-template-rows: 1fr;
+  grid-auto-columns: 1fr;
+  grid-auto-rows: 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "imagearea textarea";
+
+    position: absolute;
+
+  left: 7.7vw;
+  right: 7.7vw;
+  height: 95vh;
+  font-family: 'Menlo';
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-top: 1%;
+}
+
+#samedi .imagearea {  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1.4fr 2fr 1.3fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "market"
+    "bretzel"
+    "text_museum";
+  grid-area: imagearea;
+  height: 100%;
+  overflow: hidden;
+}
+
+#samedi .text_museum { 
+  grid-area: text_museum; 
+  height: 100%;
+}
+
+#samedi .bretzel { 
+  grid-area: bretzel; 
+  height: 100%;
+  overflow: hidden;
+}
+
+#samedi .market { 
+  grid-area: market; 
+  height: 100%;
+  overflow: hidden;
+}
+
+#samedi .textarea {  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "text_image_rathaus"
+    "peinture_exit";
+  grid-area: textarea;
+  height: 100%;
+  overflow: hidden
+}
+
+#samedi .text_image_rathaus {  display: grid;
+  grid-template-columns: 1.4fr 0.6fr;
+  grid-template-rows: 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "texte rathaus";
+  grid-area: text_image_rathaus;
+  height: 100%;
+}
+#samedi img{
+  width: 100%;
+  height: auto;
+}
+#samedi .rathaus { 
+  grid-area: rathaus; 
+  height: 100%;
+}
+
+#samedi .texte { 
+  grid-area: texte; 
+  height: 100%;
+  padding: 10%;
+}
+
+#samedi .peinture_exit {  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  grid-template-rows: 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "peinture .";
+  grid-area: peinture_exit;
+  height: 100%;
+}
+
+#samedi .peinture {
+  
+  height: 100%;
+  background-image: url(https://media.discordapp.net/attachments/923970312750657566/1091771871034347551/IMG_1481.jpg?width=868&height=651);
+  background-size: 100%;
+  background-position:center;
+  background-repeat: no-repeat;
+}
+
+
+
+#samedi .textarea h2{ 
+  font-size: clamp(1rem, 1.7vw, 5rem);
+}
+
+
+
+
+
+
+#samedi_aprem{
+  display: block;
+  width: 100vw;
+  height: 100vh;
+  background-color: #E3CCAE;
+  position: relative;
+}
+
+#samedi_aprem img{
+  width: 100%;
+}
+#samedi_aprem::after{
+  content: '';
+  display: block;
+  height: 20vw;
+  width: 20vw;
+  border-top: 2.7vw solid #000000;
+  border-left: 2.7vw solid #000000;
+  position: absolute;
+  top: 5vw;
+  left: 5vw;
+}
+
+#samedi_aprem::before{
+  content: '';
+  display: block;
+  height: 20vw;
+  width: 20vw;
+  border-bottom: 2.7vw solid #000000;
+  border-right: 2.7vw solid #000000;
+  position: absolute;
+  bottom: 5vw;
+  right: 5vw;
+}
+
+
+
+
+#samedi_aprem .container {  
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 0.8fr 1.2fr;
+  grid-auto-columns: 1fr;
+  grid-auto-rows: 1fr;
+  gap: 10px 10px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "textarea exterieur"
+    "bmw correspondante";
+    height: 100%;
+    font-family: 'Menlo';
+    position: absolute;
+
+  left: 7.7vw;
+  right: 7.7vw;
+  height: 65vh;
+  font-family: 'Menlo';
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-top: 7.5%;
+}
+
+#samedi_aprem .exterieur {  
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  grid-template-rows: 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    ". .";
+  grid-area: exterieur;
+  height: 100%;
+  overflow: hidden;
+}
+#samedi_aprem .exterieur img{
+  width: 70%;
+  height: auto;
+}
+
+#samedi_aprem .bmw { 
+  height: 100%;
+}
+
+#samedi_aprem .moto {  display: grid;
+  grid-template-columns: 0.9fr 0.9fr 1.2fr;
+  grid-template-rows: 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    ". . .";
+  grid-area: moto;
+  height: 50%;
+}
+
+#samedi_aprem .bmw_batiment { 
+  grid-area: bmw_batiment; 
+  height: 100%;
+  background-image: url('./ressource/samedi/bmw.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#samedi_aprem .correspondante {  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 0.8fr 1.2fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "texte_correspondante_route"
+    "next_button";
+  grid-area: correspondante;
+  height: 100%;
+}
+
+#samedi_aprem .texte_correspondante_route { 
+  grid-area: texte_correspondante_route; 
+  height: 100%;
+}
+
+#samedi_aprem .next_button { 
+  grid-area: next_button; 
+  height: 100%;
+}
+
+#samedi_aprem .textarea { 
+  grid-area: textarea; 
+  height: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+#dimanche{
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+  background-color: #E3CCAE;
+}
+#dimanche::after{
+  content: '';
+  display: block;
+  height: 20vw;
+  width: 20vw;
+  border-bottom: 2.7vw solid #000000;
+  border-left: 2.7vw solid #000000;
+  position: absolute;
+  bottom: 5vw;
+  left: 5vw;
+
+}
+
+#dimanche::before{
+  content: '';
+  display: block;
+  height: 20vw;
+  width: 20vw;
+  border-top: 2.7vw solid #000000;
+  border-right: 2.7vw solid #000000;
+  position: absolute;
+  top: 5vw;
+  right: 5vw;
+}
+
+
+#dimanche .container { 
+  display: grid; 
+  grid-auto-columns: 1fr; 
+  grid-auto-rows: 1fr; 
+  grid-template-columns: 1fr 1fr 1fr; 
+  grid-template-rows: 0.9fr 1.1fr; 
+  gap: 0px 0px; 
+  grid-template-areas: 
+    ". . ."
+    ". . ."; 
+  position: absolute;
+  top: 7.7vw;
+  left: 7.7vw;
+  bottom: 7.7vw;
+  right: 7.7vw;
+  overflow: hidden;
+  font-family: 'Menlo';
+  
+}
+#dimanche h3{
+  font-size: clamp(1rem, 1.7vw, 5rem);
+  text-align: center;
+}
+#dimanche .glasse{
+  background-image: url('./ressource/dimanche/glasse.jpg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+#dimanche .luge{
+  background-image: url('./ressource/dimanche/luge.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+#dimanche .pont{
+  background-image: url('./ressource/dimanche/pont.jpg');
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+
+
+
+
+#lundi{
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  background-color: #E3CCAE;
+}
+
+#lundi::after{
+  content: '';
+  display: block;
+  height: 20vw;
+  border-top: 2.7vw solid #000000;
+  border-left: 2.7vw solid #000000;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 5vw;
+}
+
+#lundi::before{
+  content: '';
+  display: block;
+  height: 20vw;
+  border-bottom: 2.7vw solid #000000;
+  border-right: 2.7vw solid #000000;
+  position: absolute;
+  left: 5vw;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+#lundi .container{
+  display: grid; 
+  grid-auto-columns: 1fr; 
+  grid-auto-rows: 1fr; 
+  grid-template-columns: 1fr 1fr 1fr; 
+  grid-template-rows: 1.1fr 1fr; 
+  gap: 0px 0px; 
+  grid-template-areas: 
+    ". . ."
+    ". . ."; 
+    position: absolute;
+  top: 1vw;
+  left: 7.7vw;
+  bottom: 1vw;
+  right: 7.7vw;
+  overflow: hidden;
+  font-family: 'Menlo';
+}
+
+
+#lundi h3{
+  font-size: clamp(1rem, 1.7vw, 5rem);
+  text-align: center;
+}
+#lundi .couvant{
+  background-image: url('./ressource/lundi/couvant.jpg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+
+}
+#lundi .classe{
+  background-image: url('./ressource/lundi/classe.jpg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+
+}
+#lundi .chasse_au_tresor{
+  background-image: url('./ressource/lundi/chasse_au_tresor.jpg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+
+}
+#lundi .rathaus{
+  background-image: url('./ressource/lundi/rathaus.jpg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+
+}
+
+
+
+#mardi{
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  background-color: #E3CCAE;
+}
+#mardi::after{
+  content: '';
+  display: block;
+  height: 20vw;
+  width: 20vw;
+  border-bottom: 2.7vw solid #000000;
+  border-left: 2.7vw solid #000000;
+  position: absolute;
+  bottom: 5vw;
+  left: 5vw;
+
+}
+#mardi::before{
+  content: '';
+  display: block;
+  height: 20vw;
+  width: 20vw;
+  border-top: 2.7vw solid #000000;
+  border-right: 2.7vw solid #000000;
+  position: absolute;
+  top: 5vw;
+  right: 5vw;
+}
+
+
+
+
+#mardi .container{
+  display: grid; 
+  grid-auto-columns: 1fr; 
+  grid-auto-rows: 1fr; 
+  grid-template-columns: 1fr 1fr 1fr; 
+  grid-template-rows: 1fr 1fr; 
+  gap: 0px 0px; 
+  grid-template-areas: 
+    ". . ."
+    ". . .";
+    position: absolute;
+  top: 7.7vw;
+  left: 7.7vw;
+  bottom: 7.7vw;
+  right: 7.7vw;
+  overflow: hidden;
+  font-family: 'Menlo';
+}
+
+
+#mardi h3{
+  font-size: clamp(1rem, 1.7vw, 5rem);
+  text-align: center;
+}
+
+#mardi .eglise_bamberg{
+  background-image: url('./ressource/mardi/eglise_bamberg.jpg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+
+}
+#mardi .rue{
+  background-image: url('./ressource/mardi/rue.jpg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+
+}
+#mardi .statu{
+  background-image: url('./ressource/mardi/statu.jpg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+#mercredi{
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  background-color: #E3CCAE;
+}
+#mercredi::after{
+  content: '';
+  display: block;
+  height: 20vw;
+  width: 20vw;
+  border-top: 2.7vw solid #000000;
+  border-left: 2.7vw solid #000000;
+  position: absolute;
+  top: 5vw;
+  left: 5vw;
+}
+#mercredi::before{
+  content: '';
+  display: block;
+  height: 20vw;
+  width: 20vw;
+  border-bottom: 2.7vw solid #000000;
+  border-right: 2.7vw solid #000000;
+  position: absolute;
+  bottom: 5vw;
+  right: 5vw;
+}
+#mercredi .container {  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  grid-template-rows: 0.9fr 1.1fr;
+  grid-auto-columns: 1fr;
+  grid-auto-rows: 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    ". ."
+    ". .";
+    position: absolute;
+  top: 7.7vw;
+  left: 7.7vw;
+  bottom: 7.7vw;
+  right: 7.7vw;
+  overflow: hidden;
+  font-family: 'Menlo';
+}
+
+
+#mercredi h3{
+  font-size: clamp(1rem, 1.7vw, 5rem);
+  text-align: center;
+}
+
+#mercredi .nuremberg{
+  background-image: url('./ressource/mercredi/nuremberg.jpg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+
+}
+#mercredi .congres{
+  background-image: url('./ressource/mercredi/congres.jpg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+#jeudi{
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  background-color: #E3CCAE;
+}
+#jeudi::after{
+  content: '';
+  display: block;
+  width: 20vw;
+  border-top: 2.7vw solid #000000;
+  border-left: 2.7vw solid #000000;
+  border-bottom: 2.7vw solid #000000;
+  position: absolute;
+  top: 5vw;
+  left: 5vw;
+  bottom: 5vw;
+}
+#jeudi::before{
+  content: '';
+  display: block;
+  width: 20vw;
+  border-top: 2.7vw solid #000000;
+  border-bottom: 2.7vw solid #000000;
+  border-right: 2.7vw solid #000000;
+  position: absolute;
+  bottom: 5vw;
+  top: 5vw;
+  right: 5vw;
+}
+#jeudi .container{
+  display: grid; 
+  grid-auto-columns: 1fr; 
+  grid-auto-rows: 1fr; 
+  grid-template-columns: 0.9fr 1.1fr 1fr; 
+  grid-template-rows: 1fr 1fr; 
+  gap: 0px 0px; 
+  grid-template-areas: 
+    ". . ."
+    ". . ."; 
+    position: absolute;
+    top: 7.7vw;
+    left: 7.7vw;
+    bottom: 7.7vw;
+    right: 7.7vw;
+    overflow: hidden;
+    font-family: 'Menlo';
+}
+#jeudi .beau_chateau{
+  background-image: url('./ressource/jeudi/beau_chateau.jpg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+
+}
+#jeudi .fontaine{
+  background-image: url('./ressource/jeudi/fontaine.jpg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+
+}
+#jeudi .vieux_chateau{
+  background-image: url('./ressource/jeudi/vieux_chateau.jpg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+
+}
+#jeudi .voute{
+  background-image: url('./ressource/jeudi/voute.jpg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: top;
+
+}
+#jeudi h3{
+  font-size: clamp(1rem, 1.7vw, 5rem);
+  text-align: center;
+}
+
+
+
+
+
+
+
+#vendredi_retour{
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  background-color: #E3CCAE;
+}
+#vendredi_retour::after{
+  content: '';
+  display: block;
+  height: 20vw;
+  width: 20vw;
+  border-bottom: 2.7vw solid #000000;
+  border-left: 2.7vw solid #000000;
+  position: absolute;
+  bottom: 5vw;
+  left: 5vw;
+
+}
+#vendredi_retour::before{
+  content: '';
+  display: block;
+  height: 20vw;
+  width: 20vw;
+  border-top: 2.7vw solid #000000;
+  border-right: 2.7vw solid #000000;
+  position: absolute;
+  top: 5vw;
+  right: 5vw;
+}
+
+#vendredi_retour .container {  display: grid;
+  grid-template-columns: 0.7fr 1.3fr;
+  grid-template-rows: 1fr 1fr;
+  grid-auto-columns: 1fr;
+  grid-auto-rows: 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    ". ."
+    ". .";
+    position: absolute;
+    top: 7.7vw;
+    left: 7.7vw;
+    bottom: 7.7vw;
+    right: 7.7vw;
+    overflow: hidden;
+    font-family: 'Menlo';
+}
+#vendredi_retour .paysage{
+  background-image: url('./ressource/vendredi_retour/paysage.jpg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+
+}
+#vendredi_retour .guitare{
+  background-image: url('./ressource/vendredi_retour/guitare.jpg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: top;
+
+}
+#vendredi_retour h3{
+  font-size: clamp(1rem, 1.7vw, 5rem);
+  text-align: center;
+}
+
+
+
+/* Samstag haten wir München besuchen. Am Morgen wir gingen am Marienplatz. Im diese platz finden wir das Neues Rathaus wieder aufbauen nach der krieg wie die ganze Stadt
+. Um 11:45 sahen wir das Glockenspiel.
+Es war auch ein shöne brunnen, die heißt: Fishbrunnen.
+Nach wir sind auf das Viktualien Market gegangen wo wir Brezel gekaufen für 1€.
+Wir konnten das 30m Maibaum sehen.
+
+Von 12 bis 13 Uhr wie war in eine Art Museum mit viel malen von aller modern Epochen. 
+Mein lieblingmalen ist von Franz Radziwill gemalt 1949 nach dem zweiten Krieg.
+
+
+
+
+
+Am mittag sind wir essen im der Olympiapark. Wir sehen den Fernsehturm und shöne Auto weil das BMW museum nicht lange war.
+Wir waren nach dem essem dort. Ich interessiere mich nicht für Autos, aber das Archiketur und der Autos sehr shöne und modern war.
+
+
+
+
+Wir sind dann der Straße nach Bayern, auf sahen wir das Fußballstadion von Bayern. 
+Alles waren begierig und stresst, ihren Korrespondent treffen davon ich.
+
+
+
+
+
+
+
+
+Montag morgen gingen wir im der Schule und wir haben der Frühstück. Dann haben wir besucht das Kloster neben der Schule. Die Schwägerin erzahlte legende von die Orte. Wir besucht die moderne Schule wo der jüngste arbeit. Nach sind wir in der village gelaufen. Ich habe unterricht in Physik, Mathematik und Wirtschaft bis 13 Uhr. Ich finde die deutsche Schule besser als die franzosische Schule war die schuler sind freier, es gibt keine Aufseher, Zaun... und die Unterricht sind nicht als lang.
+
+Nachmittag, wir haben eine Schatzsuche gemacht im Bamberg, ich habe viel lernen.
+
+
+
+
+
+Dienstag morgen haben wir fragen für ein Interview mit tutorinen geschrieben. 
+Wir sprachen über die Unterschiede zwischen deutsche Schule und französische Schule und wir sind vertig mit ein memory spiel. 
+  
